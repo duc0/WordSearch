@@ -45,7 +45,7 @@ function isSubString(small, big) {
         if (start === bigLen) {
             return false;
         }
-        while (start < bigLen && ViMap(small[i]) !== ViMap(big[start])) {
+        while (start < bigLen && ViMap(small[i]).toLowerCase() !== ViMap(big[start]).toLowerCase()) {
             start++;
             if (start === bigLen) {
                 return false;
@@ -82,5 +82,5 @@ $(document).ready(function() {
     $.get('words.txt', function(data) {
         window.words = data.split('\n').filter(wordFilter);
     });
-    $('#WordQuery').bind('input', SearchWord);
+    $('#WordQuery').bind('change', SearchWord);
 });
