@@ -39,13 +39,15 @@ function ViMap(c) {
 }
 
 function isSubString(small, big) {
+    small = small.toLocaleLowerCase();
+    big = big.toLocaleLowerCase();
     var start = 0;
     var bigLen = big.length;
     for (var i = 0, len = small.length; i < len; i++) {
         if (start === bigLen) {
             return false;
         }
-        while (start < bigLen && ViMap(small[i].toLocaleLowerCase()) !== ViMap(big[start].toLocaleLowerCase())) {
+        while (start < bigLen && ViMap(small[i]) !== ViMap(big[start])) {
             start++;
             if (start === bigLen) {
                 return false;
