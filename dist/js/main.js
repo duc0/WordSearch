@@ -45,7 +45,7 @@ function isSubString(small, big) {
         if (start === bigLen) {
             return false;
         }
-        while (start < bigLen && ViMap(small[i]).toLowerCase() !== ViMap(big[start]).toLowerCase()) {
+        while (start < bigLen && ViMap(small[i].toLocaleLowerCase()) !== ViMap(big[start].toLocaleLowerCase())) {
             start++;
             if (start === bigLen) {
                 return false;
