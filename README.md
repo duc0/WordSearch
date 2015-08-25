@@ -1,3 +1,3 @@
-Run:
+Search for words that contain a substring:
 
-https://cdn.rawgit.com/ducnm0/WordSearch/master/dist/index.html
+Run: https://rawgit.com/ducnm0/WordSearch/master/dist/index.html
