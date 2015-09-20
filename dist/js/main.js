@@ -84,5 +84,5 @@ $(document).ready(function() {
     $.get('words.txt', function(data) {
         window.words = data.split('\n').filter(wordFilter);
     });
-    $('#WordQuery').bind('change', SearchWord);
+    $('#WordQuery').bind('input', SearchWord);
 });
